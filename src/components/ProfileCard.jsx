@@ -11,13 +11,17 @@ function Profile(props) {
       <h3>{props.city}</h3>
       <p>{props.designation}</p>
       <div className="buttons">
-        <button className="primary">Message</button>
+        <button className="primary">
+          <span className="transition"></span>
+          <span className="gradient"></span>
+          <span className="label">Button</span>
+        </button>
         <button className="primary outline">Following</button>
       </div>
       <div className="skills">
         <h6>Skills</h6>
         <ul>
-          {props.skils.map((skill, index) => (
+          {props.skills.map((skill, index) => (
             <li key={index}>{skill}</li>
           ))}
         </ul>

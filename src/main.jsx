@@ -9,7 +9,7 @@ createRoot(document.getElementById("root")).render(
     name="James"
     city="Chennai"
     designation="Designer"
-    skils={["HTML", "CSS", "JavaScript", "React", "Node", "Express", "MongoDB"]}
+    skills={["HTML", "CSS", "JavaScript", "React", "Node", "Express", "MongoDB"]}
     online ={true}  profile ="two.jpg"
   />
 );
