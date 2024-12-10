@@ -1,5 +1,33 @@
-function ProfileCard() {
-  return <div>ProfileCard</div>;
+/* eslint-disable react/prop-types */
+function Profile(props) {
+  console.log(props);
+  return (
+    <div className="card-container">
+      <span className={props.online ? "pro online" : "pro offline"}>
+        {props.online ? "Online" : "Offline"}
+      </span>
+      <img src={props.profile} className="img" />
+      <h3>{props.name}</h3>
+      <h3>{props.city}</h3>
+      <p>{props.designation}</p>
+      <div className="buttons">
+        <button className="primary">Message</button>
+        <button className="primary outline">Following</button>
+      </div>
+      <div className="skills">
+        <h6>Skills</h6>
+        <ul>
+          {props.skils.map((skill, index) => (
+            <li key={index}>{skill}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
 }
 
-export default ProfileCard;
+export const ProfileCard = () => {
+  return <Profile />;
+};
+
+export default Profile;
